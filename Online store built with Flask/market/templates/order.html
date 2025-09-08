@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  UkraineBazzar
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row" style="margin-left: 20px;">
+    {% for dict in list %}
+    <div class="col-3">
+      <div class="card" style="width: 15rem; margin: 5px;">
+        <img class="card-img-top" src="https://picsum.photos/100" alt="Зображення товару"/>
+        <div class="card-body">
+          <h5 class="card-title text-primary">Назва: {{ dict.Name }}</h5>
+          <h5 class="card-title text-success">Бренд: {{ dict.Brand }}</h5>
+          <h5 class="card-title text-danger">Ціна: {{ dict.Price }}</h5>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block navBar %}
+<div style="margin: 5px;">
+  <form class="form-inline my-2 my-lg-0" method="POST">
+    <input class="form-control mr-sm-2" type="search" placeholder="Код купону" name="Promo_Code">
+    <button class="btn btn-danger my-2 my-sm-0 text-light" type="submit">Оформити замовлення</button>
+  </form>
+</div>
+{% endblock %}
+
+</div>

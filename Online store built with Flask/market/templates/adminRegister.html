@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+  Реєстрація адміністратора
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div style="max-width: 30%;">
+    <form method="POST" action="">
+      <h1 class="text-center">
+        Адміністратор, введіть ваші дані
+      </h1>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Ім'я" name="First_Name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Прізвище" name="Last_Name">
+        </div>
+      </div>
+      <div class="form-group" style="padding-top: 10px;">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль" name="Password">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+          Ваш пароль має бути довжиною 8-20 символів, містити літери і цифри, та не повинен містити пробіли, спеціальні символи чи емодзі.
+        </small>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Надіслати</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

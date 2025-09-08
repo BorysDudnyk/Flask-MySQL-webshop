@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+  Вхід користувача
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div style="max-width: 30%;">
+    <form method="POST" action="">
+      <h1 class="text-center">
+        Продавець, введіть свої дані для автентифікації
+      </h1>
+
+      <div class="form-group" style="padding-top: 10px;">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Електронна пошта" name="Email">
+        <small id="emailHelp" class="form-text text-muted">Ми ніколи не поділимось вашою електронною поштою з іншими.</small>
+      </div>
+
+      <div class="form-group">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль" name="Password">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+          Ваш пароль повинен містити від 8 до 20 символів, включати літери та цифри, і не повинен містити пробілів, спеціальних символів або емодзі.
+        </small>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Увійти</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

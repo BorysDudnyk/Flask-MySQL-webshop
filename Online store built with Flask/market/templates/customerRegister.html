@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+  Реєстрація клієнта
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div style="max-width: 400px; width: 100%;">
+    <form method="POST" action="">
+      <h1 class="text-center mb-4">Клієнте, введіть свої дані</h1>
+
+      <div class="form-row mb-3">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Ім'я" name="First_Name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Прізвище" name="Last_Name">
+        </div>
+      </div>
+
+      <div class="form-group mb-3">
+        <input type="email" class="form-control" placeholder="Електронна пошта" name="Email">
+        <small class="form-text text-muted">Ми ніколи не передамо вашу електронну пошту третім особам.</small>
+      </div>
+
+      <div class="form-group mb-3">
+        <input type="password" class="form-control" placeholder="Пароль" name="Password">
+        <small class="form-text text-muted">
+          Ваш пароль має містити 8–20 символів, включати літери та цифри й не повинен містити пробілів, спеціальних символів або емодзі.
+        </small>
+      </div>
+
+      <div class="form-group mb-4">
+        <input type="text" class="form-control" placeholder="Номер телефону" name="Mobile_No">
+        <small class="form-text text-muted">Повинен містити 10 цифр.</small>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Надіслати</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

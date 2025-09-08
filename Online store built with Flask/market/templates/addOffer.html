@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Панель продавця
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div style="max-width: 30%;">
+    <form method="POST" action="">
+      <h1 class="text-center">
+        Введіть деталі пропозиції
+      </h1>
+
+      <div class="form-group" style="padding-top: 10px;">
+        <input class="form-control" id="exampleInputEmail1" placeholder="Промокод" name="Promo_Code">
+      </div>
+      <div class="form-group">
+        <input class="form-control" id="exampleInputPassword1" placeholder="Відсоток знижки" name="Percentage_Discount">
+      </div>
+      <div class="form-group">
+        <input class="form-control" id="exampleInputPassword1" placeholder="Мінімальна сума замовлення" name="Min_OrderValue">
+      </div>
+
+      <div class="form-group">
+        <input class="form-control" id="exampleInputPassword1" placeholder="Максимальна знижка" name="Max_Discount">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Відправити</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block navBar %}
+  <a class="btn btn-outline-success my-2 my-sm-0 text-light bg-dark" href="/admin/{{admin_id}}">Повернутися</a>
+{% endblock %}

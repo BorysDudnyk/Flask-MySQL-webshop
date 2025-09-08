@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+  Ролі адміністратора
+{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div style="max-width: 30%">
+    <form method="POST" action="">
+      <h1 class="text-center mb-4">Будь ласка, оберіть свою роль</h1>
+      <div class="d-flex flex-column align-items-center">
+        <div class="form-group w-100 mb-2">
+          <a class="btn btn-lg btn-outline-info w-100 text-center" href="/adminOrder/{{admin_id}}">Переглянути замовлення</a>
+        </div>
+
+        <div class="form-group w-100 mb-2">
+          <a class="btn btn-lg btn-outline-info w-100 text-center" href="/adminDelivery_boy/{{admin_id}}">Додати кур'єра</a>
+        </div>
+
+        <div class="form-group w-100 mb-2">
+          <a class="btn btn-lg btn-outline-info w-100 text-center" href="/adminOffer/{{admin_id}}">Додати нові пропозиції</a>
+        </div>
+
+        <div class="form-group w-100 mb-2">
+          <a class="btn btn-lg btn-outline-info w-100 text-center" href="/adminProduct/{{admin_id}}">Додати новий товар</a>
+        </div>
+
+        <div class="form-group w-100 mb-2">
+          <a class="btn btn-lg btn-outline-info w-100 text-center" href="/adminSeller/{{admin_id}}">Додати продавця</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
